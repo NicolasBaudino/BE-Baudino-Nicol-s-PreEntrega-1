@@ -88,32 +88,5 @@
 		"code": "hjk",
 		"stock": 25,
 		"id": 10
-	},
-	{
-		"title": "nuevo",
-		"description": "hola",
-		"code": "1243A",
-		"price": 25,
-		"status": true,
-		"stock": 5,
-		"category": "asd",
-		"thumbnails": [
-			"asd.jpg",
-			"asd2.jpg"
-		],
-		"id": 11
-	},
-	{
-		"title": "nuevo",
-		"description": "hola",
-		"price": 25,
-		"status": true,
-		"stock": 5,
-		"category": "asd",
-		"thumbnails": [
-			"asd.jpg",
-			"asd2.jpg"
-		],
-		"id": 12
 	}
 ]
