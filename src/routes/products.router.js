@@ -31,7 +31,7 @@ router.get("/:pid", (request, response) => {
 router.post("/", (req, res) => {
     const { title, description, code, price, stock, category, thumbnails } = req.body;
     
-    if (!title && !description && !code && !price && !stock && !category){
+    if (title == null || description == null || code == null || price == null || stock == null || category == null){
         return res.status(400).json({message: "Deben estar completos todos los campos excepto el thumbnail"})
     }
     

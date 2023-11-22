@@ -26,13 +26,14 @@ export default class cartManager {
     }
 
     async addProductCart(cartId, productId) {
-        const index = this.listOfCarts.findIndex((element) => element.id == cartId);
+        const index = this.listOfCarts.findIndex((element) => element.id == Number(cartId));
         if (index >= 0){
-            if(this.listOfCarts[index].products.find((element) => element.id == productId)) {
-                this.listOfCarts[index].products[this.listOfCarts[index].products.findIndex((element) => element.product == productId)].quantity += 1;
+            const findProduct = this.listOfCarts[index].products.find((element) => element.product == Number(productId));
+            if(findProduct) {
+                this.listOfCarts[index].products[this.listOfCarts[index].products.findIndex((element) => element.product == Number(productId))].quantity += 1;
             }
             else {
-                this.listOfCarts[index].products.push({"product": productId, "quantity": 1});
+                this.listOfCarts[index].products.push({"product": Number(productId), "quantity": 1});
             }
             
             
